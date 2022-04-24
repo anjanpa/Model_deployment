@@ -4,13 +4,15 @@ import marks
 app=Flask(__name__)
 
 
-@app.route("/",methods=["POST"])
+@app.route("/",methods=["GET","POST"])
 def hello():
-	if request.method=="POST":
-		rooms=float(request.form["rooms"])
-		marks_pred=marks.marks_prediction(rooms)
-		mk=marks_pred
-	return render_template("index.html",my_price=mk)
+	# if request.method=="POST":
+	# 	rooms=float(request.form["rooms"])
+	# 	marks_pred=marks.marks_prediction(rooms)
+	# 	mk=marks_pred
+	return "Hey"
+	# render_template("index.html")
+	# ,my_price=mk
 
 # @app.route("/",methods=["POST"])
 # def submit():
