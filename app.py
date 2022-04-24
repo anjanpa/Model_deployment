@@ -2,9 +2,9 @@ from flask import Flask ,render_template,request
 
 import marks
 app=Flask(__name__)
-print(app)
 
-@app.route("/",methods=["GET","POST"])
+
+@app.route("/",methods=["POST"])
 def hello():
 	if request.method=="POST":
 		rooms=float(request.form["rooms"])
